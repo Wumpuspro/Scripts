@@ -1,26 +1,5 @@
 local GUI = loadstring(game:HttpGet("https://raw.githubusercontent.com/Wumpuspro/Alpha-hub-updated/main/lib"))()
 
-local RS
-local LeftLeg
-local RightLeg
-local LeftFoot
-local RightFoot
-local Distance = 0
-local DistanceTackle = 0
-local DistanceReach = 0
-local DistancePass = 0
-local DistanceWalk = 0
-local DistanceSide = 0
-local DistanceJump = 0
-local SaveDelay = 0
-local Heartbeat
-local HumanoidDied
-local TouchedBallLoop
-local RunStepped2
-local RunStepBall
-local AddBallA
-local TouchedGKBallBox
-
 local Player = game.Players.LocalPlayer
 local RootPart = Player.Character.HumanoidRootPart
 
