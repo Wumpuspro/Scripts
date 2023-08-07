@@ -1,0 +1,54 @@
+local GUI = loadstring(game:HttpGet("https://raw.githubusercontent.com/Wumpuspro/Alpha-hub-updated/main/lib"))()
+
+local UI = GUI:CreateWindow("Zen Hub", "https://discord.gg/m4EjaHF67T")
+
+local Main = UI:addPage("Main", 1, true, 6)
+local Main2 = UI:addPage("Auto Farm", 1, true, 6)
+local Main3 = UI:addPage("Stats", 1, true, 6)
+local Main4 = UI:addPage("Combat", 1, true, 6)
+local Main5 = UI:addPage("Teleport", 1, true, 6)
+local Main6 = UI:addPage("Player", 1, true, 6)
+local Main7 = UI:addPage("Extra", 1, true, 6)
+
+Main:addLabel("This is a Label", "Lol this funny")
+
+Main:addButton("This is a button", function()
+    game.StarterGui:SetCore("SendNotification", {
+        Title = "Clicked",
+        Text = "Lo",
+    })
+end)
+
+Main:addToggle("This is a Toggle", function(value)
+    print(value)
+    if value == false then
+        game.StarterGui:SetCore("SendNotification", {
+            Title = "Toggle",
+            Text = "false",
+        })
+    else
+        game.StarterGui:SetCore("SendNotification", {
+            Title = "Toggle",
+            Text = "true",
+        })
+    end
+end)
+
+Main:addSlider("This is a Slider", 16, 100, function(value)
+    print(value)
+end)
+
+Main:addTextBox("This is a TextBox", "Um", function(value)
+    game.StarterGui:SetCore("SendNotification", {
+        Title = "Wrote",
+        Text = value,
+    })
+end)
+
+Main:addDropdown("This is a Dropdown", { "Um", "Yep", "Lop", "GG" }, 1, function(value)
+    game.StarterGui:SetCore("SendNotification", {
+        Title = "Selected :",
+        Text = value,
+    })
+end)
+
