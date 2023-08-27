@@ -182,11 +182,11 @@ local CF = CFrame.new
 local LatestRoom = game:GetService("ReplicatedStorage").GameData.LatestRoom
 local ChaseStart = game:GetService("ReplicatedStorage").GameData.ChaseStart
 
-if game:GetService("CoreGui"):FindFirstChild("KING HUB") then
-   game:GetService("CoreGui"):FindFirstChild("KING HUB"):Destroy()
+if game:GetService("CoreGui"):FindFirstChild("ZEN HUB") then
+   game:GetService("CoreGui"):FindFirstChild("ZEN HUB"):Destroy()
 end
 local UILib = loadstring(game:HttpGet('https://pastebin.com/raw/rmqhJWxq'))();
-local win = UILib:Window("KING HUB | Doors [Beta]",Color3.fromRGB(102, 255, 153), Enum.KeyCode.RightControl)
+local win = UILib:Window("ZEN HUB | Doors [Beta]",Color3.fromRGB(102, 255, 153), Enum.KeyCode.RightControl)
 
 local old
 old = hookmetamethod(game,"__namecall",function(self,...)
