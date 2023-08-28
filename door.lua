@@ -188,6 +188,8 @@ end
 local UILib = loadstring(game:HttpGet('https://pastebin.com/raw/rmqhJWxq'))();
 local win = UILib:Window("ZEN HUB | Doors [Beta]",Color3.fromRGB(102, 255, 153), Enum.KeyCode.RightControl)
 
+
+		-- 12781257228 Zen Hub logo assest id
 local old
 old = hookmetamethod(game,"__namecall",function(self,...)
     local args = {...}
@@ -1015,9 +1017,9 @@ MainSection:Toggle("อีเว้น",false, function(val)
                 
                 if v:IsDescendantOf(workspace) then
             Notification:Notify(
-    {Title = "KING HUB Notification", Description = v.Name:gsub("Moving",""):lower().." มา แอบดิรอไร!"},
+    {Title = "ZEN HUB Notification", Description = v.Name:gsub("Moving",""):lower().." มา แอบดิรอไร!"},
     {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "image"},
-    {Image = "http://www.roblox.com/asset/?id=11677001091", ImageColor = Color3.fromRGB(255, 255, 255)}
+    {Image = "http://www.roblox.com/asset/?id=12781257228", ImageColor = Color3.fromRGB(255, 255, 255)}
 )
                 end
             end
@@ -1063,15 +1065,15 @@ MainSection:Toggle("โค้ดห้องสมุด",false, function(val)
                 
                 if code:find("_") then
             Notification:Notify(
-    {Title = "KING HUB Notification [Beta]", Description = "Get all books first"},
+    {Title = "ZEN HUB Notification [Beta]", Description = "Get all books first"},
     {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "image"},
-    {Image = "http://www.roblox.com/asset/?id=11677001091", ImageColor = Color3.fromRGB(255, 255, 255)}
+    {Image = "http://www.roblox.com/asset/?id=12781257228", ImageColor = Color3.fromRGB(255, 255, 255)}
 )
                 else
             Notification:Notify(
-    {Title = "KING HUB Notification [Beta]", Description = "Code is ".. code},
+    {Title = "ZEN HUB Notification [Beta]", Description = "Code is ".. code},
     {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "image"},
-    {Image = "http://www.roblox.com/asset/?id=11677001091", ImageColor = Color3.fromRGB(255, 255, 255)}
+    {Image = "http://www.roblox.com/asset/?id=12781257228", ImageColor = Color3.fromRGB(255, 255, 255)}
 )
                 end
             end
@@ -1252,13 +1254,13 @@ local CF = CFrame.new
 local LatestRoom = game:GetService("ReplicatedStorage").GameData.LatestRoom
 local ChaseStart = game:GetService("ReplicatedStorage").GameData.ChaseStart
 
-if game:GetService("CoreGui"):FindFirstChild("KING HUB") then
-   game:GetService("CoreGui"):FindFirstChild("KING HUB"):Destroy()
+if game:GetService("CoreGui"):FindFirstChild("ZEN HUB") then
+   game:GetService("CoreGui"):FindFirstChild("ZEN HUB"):Destroy()
 end
 local UILib = loadstring(game:HttpGet('https://pastebin.com/raw/rmqhJWxq'))();
 local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
 local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
-local win = UILib:Window("KING HUB | Doors [Beta]",Color3.fromRGB(102, 255, 153), Enum.KeyCode.RightControl)
+local win = UILib:Window("ZEN HUB | Doors [Beta]",Color3.fromRGB(102, 255, 153), Enum.KeyCode.RightControl)
 
 local old
 old = hookmetamethod(game,"__namecall",function(self,...)
@@ -1288,6 +1290,7 @@ local MainSection = win:Tab("LocalPlayer")
 MainSection:Toggle("Speed Boots",false, function(SPEEDHACKER)
 _G.BootsSpeed = SPEEDHACKER
 end)
+		
 
 game:GetService("RunService").RenderStepped:Connect(function()
     pcall(function()
@@ -2074,9 +2077,9 @@ MainSection:Toggle("Event",false, function(val)
                 
                 if v:IsDescendantOf(workspace) then
             Notification:Notify(
-    {Title = "KING HUB Notification", Description = v.Name:gsub("Moving",""):lower().." Is Coming Hide!"},
+    {Title = "ZEN HUB Notification", Description = v.Name:gsub("Moving",""):lower().." Is Coming Hide!"},
     {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "image"},
-    {Image = "http://www.roblox.com/asset/?id=11677001091", ImageColor = Color3.fromRGB(255, 255, 255)}
+    {Image = "http://www.roblox.com/asset/?id=12781257228", ImageColor = Color3.fromRGB(255, 255, 255)}
 )
                 end
             end
@@ -2122,15 +2125,15 @@ MainSection:Toggle("library code",false, function(val)
                 
                 if code:find("_") then
             Notification:Notify(
-    {Title = "KING HUB Notification [Beta]", Description = "Get all books first"},
+    {Title = "ZEN HUB Notification [Beta]", Description = "Get all books first"},
     {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "image"},
-    {Image = "http://www.roblox.com/asset/?id=11677001091", ImageColor = Color3.fromRGB(255, 255, 255)}
+    {Image = "http://www.roblox.com/asset/?id=12781257228", ImageColor = Color3.fromRGB(255, 255, 255)}
 )
                 else
             Notification:Notify(
-    {Title = "KING HUB Notification [Beta]", Description = "Code is ".. code},
+    {Title = "ZEN HUB Notification [Beta]", Description = "Code is ".. code},
     {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "image"},
-    {Image = "http://www.roblox.com/asset/?id=11677001091", ImageColor = Color3.fromRGB(255, 255, 255)}
+    {Image = "http://www.roblox.com/asset/?id=12781257228", ImageColor = Color3.fromRGB(255, 255, 255)}
 )
                 end
             end
