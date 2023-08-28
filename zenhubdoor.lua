@@ -1946,7 +1946,7 @@ local flags = {
     autorooms = false,
 }
 
-local Win = library:Evil("Eta X","Hub",_G.Logo )
+local Win = library:Evil("Zen","Hub",_G.Logo )
 
 local tab1 = Win:CraftTab('Main')
 local page1 = tab1:CraftPage('Main',1)
