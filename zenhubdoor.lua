@@ -1919,6 +1919,33 @@ ImageButton.MouseButton1Down:connect(function()
 end)
 UICorner.Parent = ImageButton
 
+local flags = {
+    speed = 0,
+    espdoors = false,
+    espkeys = false,
+    espitems = false,
+    espbooks = false,
+    esprush = false,
+    espchest = false,
+    esplocker = false,
+    esphumans = false,
+    espgold = false,
+    goldespvalue = 0,
+    hintrush = false,
+    light = false,
+    instapp = false,
+    noseek = false,
+    nogates = false,
+    nopuzzle = false,
+    noa90 = false,
+    noskeledoors = false,
+    noscreech = false,
+    getcode = false,
+    roomsnolock = false,
+    draweraura = false,
+    autorooms = false,
+}
+
 local Win = library:Evil("Eta X","Hub",_G.Logo )
 
 local tab1 = Win:CraftTab('Main')
