@@ -59,9 +59,9 @@ end
 
 function Notification(text)
 game.StarterGui:SetCore("SendNotification", {
-  Title = "Sea Hub"; -- the title (ofc)
+  Title = "Ayami's Hub"; -- the title (ofc)
   Text = text; -- what the text says (ofc)
-  Icon = "rbxassetid://14495684069"; -- the image if u want.
+  Icon = "rbxassetid://7584008919"; -- the image if u want.
   Duration = 3; -- how long the notification should in secounds
 })
 end
@@ -111,7 +111,7 @@ Top.ZIndex = 2
 	Logo.BackgroundTransparency = 1.000
 	Logo.Position = UDim2.new(0, 10, 0, 30)
 	Logo.Size = UDim2.new(0, 60, 0, 60)
-	Logo.Image = "rbxassetid://14495684069"
+	Logo.Image = "rbxassetid://7584008919"
 	Logo.Active = true
 	Logo.ZIndex = 8
 	
@@ -125,7 +125,7 @@ Top.ZIndex = 2
 	Name.Position = UDim2.new(0.107756112, 0, 0, 0)
 	Name.Size = UDim2.new(0, 50, 0, 27)
 	Name.Font = Enum.Font.GothamSemibold
-	Name.Text = "Sea Hub"
+	Name.Text = "Ayami Hub"
 	Name.TextColor3 = Color3.fromRGB(35, 21, 233)
 	Name.TextSize = 17.000
 
