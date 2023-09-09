@@ -236,7 +236,7 @@ end
      Image = "rbxassetid://7584008919";
      Parent = object.Main;
      Position = UDim2.new(-0.00821163785, 0, -0.0163606256, 0);
-     Size = UDim2.new(0, 39, 0, 37);
+     Size = UDim2.new(0, 25, 0, 35);
  })
  
  object.CheckKey = instance.new("TextButton", {
