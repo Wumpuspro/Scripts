@@ -86,222 +86,132 @@ local function MakeDraggable(topbarobject, object)
     )
 end
 
--- MAIN GUI --
- local instance = {obj = {}}
- function instance.new(class, properties)
-     local inst = Instance.new(class)
-     for property, value in next, properties do
-         inst[property] = value
-     end
-     table.insert(instance.obj, inst)
-     return inst
- end
- 
- local object = instance.obj
- 
- object.PandaKeySystem = instance.new("ScreenGui", {
-     Name = "Panda Key System";
-     Parent = game.CoreGui;
-     ZIndexBehavior = Enum.ZIndexBehavior.Sibling;
- })
- 
- object.Main = instance.new("Frame", {
-     AnchorPoint = Vector2.new(0.5, 0.5);
-     BackgroundColor3 = Color3.fromRGB(17, 24, 39);
-     BorderColor3 = Color3.fromRGB(0, 0, 0);
-     BorderSizePixel = 0;
-     Name = "Main";
-     Parent = object.PandaKeySystem;
-     Position = UDim2.new(0.492770165, 0, 0.5, 0);
-     Size = UDim2.new(0, 380, 0, 200);
- })
+-- TWEEN GUI --
+local LoadUi = Instance.new("ScreenGui")
+local KeySytem = Instance.new("Folder")
+local Key = Instance.new("Frame")
+local Logo = Instance.new("Frame")
+local ImageLabel = Instance.new("ImageLabel")
+local Box = Instance.new("TextBox")
+local UICorner = Instance.new("UICorner")
+local Get = Instance.new("TextButton")
+local UICorner_2 = Instance.new("UICorner")
+local Check = Instance.new("TextButton")
+local UICorner_3 = Instance.new("UICorner")
+local Dis = Instance.new("TextButton")
+local UICorner_4 = Instance.new("UICorner")
 
+--Properties:
 
- object.UICorner = instance.new("UICorner", {
-     CornerRadius = UDim.new(0, 5);
-     Parent = object.Main;
- })
- 
- object.GetKey = instance.new("TextButton", {
-     BackgroundColor3 = Color3.fromRGB(31, 41, 55);
-     BorderColor3 = Color3.fromRGB(0, 0, 0);
-     BorderSizePixel = 0;
-     Font = Enum.Font.Gotham;
-     Name = "GetKey";
-     Parent = object.Main;
-     Position = UDim2.new(0.51810205, 0, 0.742947996, 0);
-     Size = UDim2.new(0, 173, 0, 39);
-     Text = "Get Key";
-     TextColor3 = Color3.fromRGB(225, 225, 225);
-     TextSize = 14.000;
- })
- object.GetKey.MouseButton1Click:Connect(function()
-    object.TextBox.Text = PandaAuth:GetLink(ServiceName)
-    setclipboard(PandaAuth:GetLink(ServiceName))
-    print("[ "..HubName.." ]".." Succesfully copied get key link to clipboard!")
-    Notify.New("Succesfully copied link!", 2)
- end)
- 
- object.UICorner = instance.new("UICorner", {
-     CornerRadius = UDim.new(0, 5);
-     Parent = object.GetKey;
- })
+LoadUi.Name = "LoadUi"
+LoadUi.Parent = game.CoreGui
+LoadUi.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
- object.UIStroke = instance.new("UIStroke", {
-    ApplyStrokeMode = Enum.ApplyStrokeMode.Border;
-    Color = Color3.fromRGB(51, 61, 77);
-    LineJoinMode = Enum.LineJoinMode.Round;
-    Parent = object.GetKey;
-})
- 
- object.TextBox = instance.new("TextBox", {
-     BackgroundColor3 = Color3.fromRGB(21, 31, 45);
-     BorderColor3 = Color3.fromRGB(0, 0, 0);
-     BorderSizePixel = 0;
-     Font = Enum.Font.SourceSans;
-     Parent = object.Main;
-     PlaceholderColor3 = Color3.fromRGB(178, 178, 178);
-     PlaceholderText = "Enter your key here..";
-     Position = UDim2.new(0.0331600793, 0, 0.414063871, 0);
-     Size = UDim2.new(0, 357, 0, 50);
-     Text = "";
-     TextColor3 = Color3.fromRGB(255, 255, 255);
-     TextSize = 14.000;
-     TextTruncate = Enum.TextTruncate.AtEnd;
-     ClearTextOnFocus = false;
- })
- if isfile(KeyFile) then
-    object.TextBox.Text = readfile(KeyFile)
-    Notify.New("Succesfully loaded key!", 5)
- end
+KeySytem.Name = "KeySytem"
+KeySytem.Parent = LoadUi
 
- object.UIPadding = instance.new("UIPadding", {
-     PaddingLeft = UDim.new(0, 15);
-     Parent = object.TextBox;
- })
+Key.Name = "Key"
+Key.Parent = LoadUi
+Key.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+Key.Position = UDim2.new(0.287708133, 0, 0.411370039, 0)
+Key.Size = UDim2.new(0, 291, 0, 100)
 
- object.UICorner = instance.new("UICorner", {
-     Parent = object.TextBox;
- })
+Logo.Name = "Logo"
+Logo.Parent = Key
+Logo.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Logo.Position = UDim2.new(-0.422680408, 0, 0, 0)
+Logo.Size = UDim2.new(0, 100, 0, 100)
 
- object.UIStroke = instance.new("UIStroke", {
-    ApplyStrokeMode = Enum.ApplyStrokeMode.Border;
-    Color = Color3.fromRGB(51, 61, 77);
-    LineJoinMode = Enum.LineJoinMode.Round;
-    Parent = object.TextBox;
-})
- 
- object.TopBar = instance.new("Frame", {
-     BackgroundColor3 = Color3.fromRGB(31, 41, 55);
-     BorderColor3 = Color3.fromRGB(0, 0, 0);
-     BorderSizePixel = 0;
-     Name = "TopBar";
-     Parent = object.Main;
-     Size = UDim2.new(0, 380, 0, 30);
- })
- 
- object.UICorner = instance.new("UICorner", {
-     CornerRadius = UDim.new(0, 5);
-     Parent = object.TopBar;
- })
- 
- object.Frame = instance.new("Frame", {
-     BackgroundColor3 = Color3.fromRGB(51, 61, 77);
-     BorderColor3 = Color3.fromRGB(0, 0, 0);
-     BorderSizePixel = 0;
-     Parent = object.TopBar;
-     Position = UDim2.new(0, 0, 1, 0);
-     Size = UDim2.new(0, 380, 0, 1);
- })
- 
- object.TextLabel = instance.new("TextLabel", {
-     BackgroundColor3 = Color3.fromRGB(255, 255, 255);
-     BackgroundTransparency = 1.000;
-     BorderColor3 = Color3.fromRGB(0, 0, 0);
-     BorderSizePixel = 0;
-     Font = Enum.Font.GothamMedium;
-     Parent = object.TopBar;
-     Position = UDim2.new(0, 0, -0.333333343, 0);
-     Size = UDim2.new(0, 200, 0, 50);
-     Text = HubName.." Key System";
-     TextColor3 = Color3.fromRGB(186, 186, 186);
-     TextSize = 14.000;
- })
- 
- object.ImageLabel = instance.new("ImageLabel", {
-     BackgroundColor3 = Color3.fromRGB(255, 255, 255);
-     BackgroundTransparency = 1.000;
-     BorderColor3 = Color3.fromRGB(0, 0, 0);
-     BorderSizePixel = 0;
-     Image = "rbxassetid://7584008919";
-     Parent = object.Main;
-     Position = UDim2.new(-0.00821163785, 0, -0.0163606256, 0);
-     Size = UDim2.new(0, 25, 0, 35);
- })
- 
- object.CheckKey = instance.new("TextButton", {
-     BackgroundColor3 = Color3.fromRGB(31, 41, 55);
-     BorderColor3 = Color3.fromRGB(0, 0, 0);
-     BorderSizePixel = 0;
-     Font = Enum.Font.Gotham;
-     Name = "Check Key";
-     Parent = object.Main;
-     Position = UDim2.new(0.0305285007, 0, 0.742947996, 0);
-     Size = UDim2.new(0, 173, 0, 39);
-     Text = "Check Key";
-     TextColor3 = Color3.fromRGB(225, 225, 225);
-     TextSize = 14.000;
- })
- object.CheckKey.MouseButton1Click:Connect(function()
-    Check()
- end)
- 
- object.UICorner = instance.new("UICorner", {
-     CornerRadius = UDim.new(0, 5);
-     Parent = object.CheckKey;
- })
+ImageLabel.Parent = Logo
+ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel.Size = UDim2.new(0, 100, 0, 100)
+ImageLabel.Image = "rbxassetid://7584008919"
 
- object.UIStroke = instance.new("UIStroke", {
-    ApplyStrokeMode = Enum.ApplyStrokeMode.Border;
-    Color = Color3.fromRGB(51, 61, 77);
-    LineJoinMode = Enum.LineJoinMode.Round;
-    Parent = object.CheckKey;
-})
- 
- object.Desc = instance.new("TextLabel", {
-     BackgroundColor3 = Color3.fromRGB(225, 225, 225);
-     BackgroundTransparency = 1.000;
-     BorderColor3 = Color3.fromRGB(0, 0, 0);
-     BorderSizePixel = 0;
-     Font = Enum.Font.Gotham;
-     Name = "Desc";
-     Parent = object.Main;
-     Position = UDim2.new(0.17368421, 0, 0.165000007, 0);
-     Size = UDim2.new(0, 247, 0, 50);
-     Text = "Click 'Get Key' button to get your key!";
-     TextColor3 = Color3.fromRGB(61, 71, 85);
-     TextSize = 14.000;
- })
- MakeDraggable(object.TopBar, object.Main)
+Box.Name = "Box"
+Box.Parent = Key
+Box.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Box.Position = UDim2.new(0.0137457047, 0, 0.0800000131, 0)
+Box.Size = UDim2.new(0, 283, 0, 26)
+Box.Font = Enum.Font.SourceSans
+Box.Text = "Type Key Here.."
+Box.TextColor3 = Color3.fromRGB(0, 0, 0)
+Box.TextSize = 14.000
 
- function Check()
-    pcall(function()
-        print("[ "..HubName.." ]".." Checking key..")
-        Notify.New("Checking key..", 2)
-        if PandaAuth:ValidateKey(ServiceName, object.TextBox.Text) then
-        print("[ "..HubName.." ]".." Key is valid: "..object.TextBox.Text)
-        Notify.New("Key is valid: "..object.TextBox.Text, 3)
-        PandaAuth:SaveKey(KeyFile, object.TextBox.Text)
-        RemoveKeyUI()
-        Script()
+UICorner.Parent = Key
+
+Get.Name = "Get"
+Get.Parent = Key
+Get.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Get.Position = UDim2.new(0.0385778286, 0, 0.423076868, 0)
+Get.Size = UDim2.new(0, 80, 0, 45)
+Get.Font = Enum.Font.SciFi
+Get.Text = "Get Key"
+Get.TextColor3 = Color3.fromRGB(0, 0, 0)
+Get.TextSize = 14.000
+    Get.MouseButton1Click:Connect(function()
+        Get.Text = "Copy Success"
+        setclipboard("Paste TO GetKey Link")
+        wait(0.5)
+        Get.Text = "Get Key"
+    end)
+UICorner_2.CornerRadius = UDim.new(0, 7)
+UICorner_2.Parent = Get
+
+Check.Name = "Check"
+Check.Parent = Key
+Check.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Check.Position = UDim2.new(0.677753091, 0, 0.423076868, 0)
+Check.Size = UDim2.new(0, 80, 0, 45)
+Check.Font = Enum.Font.SciFi
+Check.Text = "Check Key"
+Check.TextColor3 = Color3.fromRGB(0, 0, 0)
+Check.TextSize = 14.000
+
+UICorner_3.CornerRadius = UDim.new(0, 7)
+UICorner_3.Parent = Check
+
+Dis.Name = "Dis"
+Dis.Parent = Key
+Dis.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Dis.Position = UDim2.new(0.361601889, 0, 0.423076868, 0)
+Dis.Size = UDim2.new(0, 80, 0, 45)
+Dis.Font = Enum.Font.SciFi
+Dis.Text = "Discord"
+Dis.TextColor3 = Color3.fromRGB(0, 0, 0)
+Dis.TextSize = 14.000
+
+    Dis.MouseButton1Click:Connect(function()
+        Dis.Text = "Copy Success"
+        setclipboard("Paste TO GetKey Link")
+        wait(0.5)
+        Dis.Text = "Get Key"
+    end)
+
+UICorner_4.CornerRadius = UDim.new(0, 7)
+UICorner_4.Parent = Dis
+
+_G.Key_KeyPass = "1"
+
+    Check.MouseButton1Click:Connect(function()
+        local KeyInput = Box.Text
+        local CorrectKey = _G.Key_KeyPass
+        if KeyInput == CorrectKey then
+            Box.Text = ""
+            Box.TextColor3 = Color3.fromRGB(255, 255, 0)
+            Box.Text = "Success Key !"
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/Zpshub/MeMayBeoHub/main/Main"))()
+            local SysemKey = game.CoreGui:FindFirstChild("LoadUi")
+            Key:TweenSize(UDim2.new(0,1,0,1),"Out","Quad",1,true)
+            wait(.2)
+            Key.Position = UDim2.new(1000, 0, 1000, 0)
         else
-        print("[ "..HubName.." ]".." Key is invalid!")
-        Notify.New("Key is invalid!", 3)
+            Box.TextColor3 = Color3.fromRGB(255, 0, 0)
+            Box.Text = "Checking..."
+            wait(.1)
+            Box.Text = "Incorrect Key !"
+            wait(0.5)
+            Box.TextColor3 = Color3.fromRGB(0, 0, 0)
+            Box.Text = "Type Key Here ..."
         end
     end)
- end
 
--- AUTO CHECK --
-if isfile(KeyFile) then
-   Check()
-end
