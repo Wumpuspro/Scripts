@@ -1,7 +1,7 @@
 -- SETTINGS --
-local ServiceName = "pandadevkit"
-local HubName = "Pelican"
-local KeyFile = "Pelican Hub.txt"
+local ServiceName = "ayamihub"
+local HubName = "Ayami_Hub"
+local KeyFile = "Ayami_Hub.txt"
 local AntiBypass = true
 
 -- SCRIPT --
