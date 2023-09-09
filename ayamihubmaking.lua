@@ -518,7 +518,7 @@ UIStroke.Name = "UIStroke"
                         ToggleImageCorner.CornerRadius = UDim.new(0, 100)
 UIStroke.Thickness = 1
                     else
-                        --Icon.Image = "http://www.roblox.com/asset/?id=6035047409"
+                        --Icon.Image = "http://www.roblox.com/asset/?id=7584008919"
                         toggled = false
                         ToggleImage2:TweenSize(UDim2.new(0, 0, 0, 0),"In","Quad",0.1,true)
                         ToggleImageCorner.CornerRadius = UDim.new(0, 5)
